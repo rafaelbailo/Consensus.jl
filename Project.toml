@@ -1,0 +1,13 @@
+name = "Consensus"
+uuid = "39099a2c-f609-41b4-99c2-62ec6735b6c9"
+authors = ["Dr Rafael Bailo"]
+version = "1.0.0-DEV"
+
+[compat]
+julia = "1.8"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
