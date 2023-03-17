@@ -9,7 +9,7 @@
 
 This package was created and is developed by [Dr Rafael Bailo](https://rafaelbailo.com/).
 
-## Basic usage
+## Usage
 
 The basic command of the library is `minimise(f, x0)`, where `f` is the function you want to minimise, and `x0` is an initial guess. It returns an approximation of the point `x` that minimises `f`.
 
@@ -63,7 +63,7 @@ For the other parameters, please refer to the paper of [R. Pinnau, C. Totzeck, O
 
 Since CBO is not a gradient method, it will perform well on rough functions. **Consensus.jl** implements two well-known test cases in any number of dimensions:
 * The [Ackley function](https://en.wikipedia.org/wiki/Ackley_function).
-* The [Rastrigin](https://en.wikipedia.org/wiki/Rastrigin_function).
+* The [Rastrigin function](https://en.wikipedia.org/wiki/Rastrigin_function).
 
 We can minimise the Ackley function in two dimensions, starting near the point $x=(1,1)$, by running
 ```jl
