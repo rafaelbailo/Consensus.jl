@@ -1,6 +1,17 @@
-using Consensus
-using Test
+using SafeTestsets
 
-@testset "Consensus.jl" begin
-    # Write your tests here.
+@safetestset "benchmarkFunctions" begin
+  include("benchmarkFunctions.jl")
+end
+
+@safetestset "method" begin
+  include("method.jl")
+end
+
+@safetestset "minimise" begin
+  include("minimise.jl")
+end
+
+@safetestset "format" begin
+  include("format.jl")
 end
