@@ -11,6 +11,9 @@ Suppressor = "fd094767-a336-5f1f-9728-57cf17d0bbfb"
 
 [compat]
 julia = "1.8"
+Distributions = "^0.25.86"
+StochasticDiffEq = "^6.59.0"
+Suppressor = "^0.2.1"
 
 [extras]
 JuliaFormatter = "98e50ef6-434e-11e9-1051-2b60c6c9e899"
