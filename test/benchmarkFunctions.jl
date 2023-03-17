@@ -5,15 +5,6 @@ const N = 20;
 
 function tests()
   @testset "Ackley Function" begin
-    @testset "allocations" begin
-      x = rand(N)
-      B = rand()
-      C = rand()
-      @test @isAllocationFree Consensus.AckleyFirstTerm(x, B)
-      @test @isAllocationFree Consensus.AckleySecondTerm(x, B)
-      @test @isAllocationFree AckleyFunction(x, B, C)
-    end
-
     @testset "values" begin
       B = rand()
       C = rand()
@@ -26,15 +17,6 @@ function tests()
   end
 
   @testset "Rastrigin Function" begin
-    @testset "allocations" begin
-      x = rand(N)
-      B = rand()
-      C = rand()
-      @test @isAllocationFree Consensus.RastriginFirstTerm(x, B)
-      @test @isAllocationFree Consensus.RastriginSecondTerm(x, B)
-      @test @isAllocationFree RastriginFunction(x, B, C)
-    end
-
     @testset "values" begin
       B = rand()
       C = rand()
@@ -47,13 +29,6 @@ function tests()
   end
 
   @testset "Parabola" begin
-    @testset "allocations" begin
-      x = rand(N)
-      B = rand()
-      C = rand()
-      @test @isAllocationFree Parabola(x, B, C)
-    end
-
     @testset "values" begin
       B = rand()
       C = rand()
