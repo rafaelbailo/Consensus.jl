@@ -46,7 +46,9 @@ function tests()
 
     @testset "shifted" begin
       f(x) = Parabola(x, 1, 2)
-      minimiseTest(f, 1)
+      x = [0]
+      z = minimise(f, x)
+      @test norm(z .- 1) < norm(x .- 1)
     end
   end
 
