@@ -19,4 +19,6 @@ function tests()
   @test f("../test")
 end
 
-tests()
+if !Sys.iswindows()
+  tests()
+end
