@@ -1,5 +1,6 @@
 # Consensus.jl
 
+[![DOI](https://zenodo.org/badge/615268479.svg)](https://zenodo.org/badge/latestdoi/615268479)
 [![CI](https://github.com/rafaelbailo/Consensus.jl/actions/workflows/CI.yml/badge.svg)](https://github.com/rafaelbailo/Consensus.jl/actions/workflows/CI.yml)
 
 **Consensus.jl** is a lightweight, gradient-free, stochastic optimisation package for Julia. It uses _Consensus-Based Optimisation_ (CBO), a flavour of _Particle Swarm Optimisation_ (PSO) first introduced by [R. Pinnau, C. Totzeck, O. Tse, and S. Martin (2017)][1]. This is a method of global optimisation particularly suited for rough functions, where gradient descent would fail. It is also useful for optimisation in higher dimensions.
