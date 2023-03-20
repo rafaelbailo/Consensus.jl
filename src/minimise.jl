@@ -28,18 +28,19 @@ function minimiseWithParsedOptions(
   function remakeProblem(prob, i, repeat)
     cache = getCache(f, x, options)
     X0 = getInitialState(x, cache)
-    return remake(prob, u0=X0, p=cache)
+    return remake(prob, u0 = X0, p = cache)
   end
   problem = SDEProblem(dt!, dW!, X0, time, cache)
-  ensembleProblem = EnsembleProblem(
-    problem,
-    prob_func=remakeProblem
-  )
+  ensembleProblem = EnsembleProblem(problem, prob_func = remakeProblem)
   solutions = nothing
   @suppress_err begin
-    solutions = solve(ensembleProblem, cache.integrator, EnsembleThreads(),
-      dt=cache.Δt, saveat=T,
-      trajectories=cache.M
+    solutions = solve(
+      ensembleProblem,
+      cache.integrator,
+      EnsembleThreads(),
+      dt = cache.Δt,
+      saveat = T,
+      trajectories = cache.M,
     )
   end
   optimisers = map(getOptimiser, solutions)
@@ -65,7 +66,7 @@ end
 function getInitialState(x::AbstractVector{<:Real}, cache::NamedTuple)
   D, N, R = cache.D, cache.N, cache.R
   X0 = zeros(D, N)
-  for n = 1:N, d = 1:D
+  for n in 1:N, d in 1:D
     X0[d, n] = rand(Uniform(x[d] - R, x[d] + R))
   end
   return X0
